@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="WeatherForecastApp">
     <head>
-        <!--
+        <!-- Tried to use some Bootstrap to create a style
         <link href="css/bootstrap.min.css" rel="stylesheet">
         
         <link href="css/stylish-portfolio.css" rel="stylesheet">
@@ -19,11 +19,11 @@
             <h3>Select a City</h3>
             <select ng-model="wfc.selected_city"
                     ng-options="city.name for city in wfc.cities"
-                    ng-change="wfc.getCurrentConditions()"></select>
+                    ng-change="wfc.getLatLonForSelected()"></select>
                     
-            <p>Selected City: {{wfc.city.name}}</p>
+            <p>Selected City: <span ng-bind="{{wfc.selected_city.name}}"></span></p>
             
-            <my-conditions-special></my-conditions-special>
+            <my-conditions></my-conditions>
             
         </div>
 		

@@ -12,5 +12,8 @@ conditions of selected cities around the United States.
 
 
 ## Sources & Referenced Codes
-
+Mirrored some info from Dr. Babb code
+API code courtesy of:
+Google Static Maps API
+Dark Sky API
 

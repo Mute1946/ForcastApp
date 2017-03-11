@@ -76,10 +76,10 @@ angular.module("WeatherForecastApp", [])
 						wfc.selected_city.lat = wfc.selected_lat;
 						wfc.selected_city.lon = wfc.selected_lon;
 						
-						var google_static_maps_key = "AIzaSyBUM57jM-ptgNExMBfExzbcAXGO7Dn7A3o"
+						var google_static_maps_key = "AIzaSyBUM57jM-ptgNExMBfExzbcAXGO7Dn7A3o";
 						
 						wfc.google_static_maps_url = "https://maps.googleapis.com/maps/api/staticmap?center=" +
-													 location.lat + "," + location.lon + 
+													 wfc.selected_lat + "," + wfc.selected_lon + 
 													 "&zoom=10&size=600x300&key=" + google_static_maps_key;
 													 
 						console.log("Google Static Map API URL");
@@ -108,8 +108,9 @@ angular.module("WeatherForecastApp", [])
 						
 				})
 				.catch(function(err){
+				    console.log(err);
 					
-				})
+				});
 		};
 		
 		wfc.selected_city = wfc.cities[0];
@@ -132,7 +133,7 @@ angular.module("WeatherForecastApp", [])
             restrict: 'E',
             scope: true,
             templateUrl: $sce.trustAsResourceUrl('currentConditions.html')
-        }
+        };
     }])
     //Factory for Google Maps
     .factory('GoogleGeolocationService', ['$sce', '$http',
@@ -151,7 +152,7 @@ angular.module("WeatherForecastApp", [])
                     
                 var trustedurl = $sce.trustAsResourceUrl(url);
                 return $http.get(trustedurl);
-            }
+            };
                 
             return geolocationService;
 			
@@ -177,8 +178,8 @@ angular.module("WeatherForecastApp", [])
 				var trustedurl = $sce.trustAsResourceUrl(url);
 				return $http.jsonp(trustedurl, {jsonpCallbackParam: 'callback'});
 				
-			}
+			};
     
 			return darkSkyWeatherService;
 		}
-	])
+	]);
