@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="WeatherForecastApp">
+    <head>
+        <!--
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        
+        <link href="css/stylish-portfolio.css" rel="stylesheet">
+         
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:
+                    300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+		-->
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div ng-controller="WeatherForecastController as wfc">
+            <h1>Weather Forecast App</h1>
+            <h3>Select a City</h3>
+            <select ng-model="wfc.selected_city"
+                    ng-options="city.name for city in wfc.cities"
+                    ng-change="wfc.getCurrentConditions()"></select>
+                    
+            <p>Selected City: {{wfc.city.name}}</p>
+            
+            <my-conditions-special></my-conditions-special>
+            
+        </div>
+		
+		<script src="angular.min.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+    
+</html>

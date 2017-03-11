@@ -1,0 +1,54 @@
+<p><img src="{{wfc.google_static_maps_url}}" /></p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<table class="table table-condensed">
+			<tr>
+				<td>
+					<span class="label label-info">Time Reported:</span>
+				</td>
+				<td>
+					<span class="badge">{{wfc.observation_time | date : 'medium'}}</span>
+				</td>
+            <tr>
+                <td>
+                    <span class="label label-info">Temperature:</span>
+                </td>
+                <td>
+                    <span class="badge">{{wsc.temperature}}°</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="label label-info">Dewpoint:</span>
+                </td>
+                <td>
+                    <span class="badge">{{wsc.dewpoint}}°</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="label label-info">Wind:</span>
+                </td>
+                <td>
+                    <span class="badge">{{wsc.windBearing}} at {{wsc.windSpeed}}</span>
+                </td>
+            </tr>            
+            <tr>
+                <td>
+                    <span class="label label-info">Current Conditions:</span>
+                </td>
+                <td>
+                    <!-- just because I'm showing the summary here DOES NOT
+                         mean that I want you do NOT do the image thing -->
+                    <span class="badge">{{wsc.summary}}</span>
+                    <!-- This is where I use the project below's own custom directive-->
+                    <!-- https://github.com/projectweekend/angular-skycons -->
+                    <!--<skycon icon="wsc.ds_icon" size="128"></skycon>-->
+                </td>
+            </tr>
+            
+        </table>
+<!--
+<p>Current Temperature: {{fwa.temperature_string}}°</p>
+<p>Dew Point: {{fwa.dp}}°</p>
+-->

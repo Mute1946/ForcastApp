@@ -1,26 +1,16 @@
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+     _______   ______   .______        ______     ___           _______.___________.        ___      .______   .______   
+    |   ____| /  __  \  |   _  \      /      |   /   \         /       |           |       /   \     |   _  \  |   _  \  
+    |  |__   |  |  |  | |  |_)  |    |  ,----'  /  ^  \       |   (----`---|  |----`      /  ^  \    |  |_)  | |  |_)  | 
+    |   __|  |  |  |  | |      /     |  |      /  /_\  \       \   \       |  |          /  /_\  \   |   ___/  |   ___/  
+    |  |     |  `--'  | |  |\  \----.|  `----./  _____  \  .----)   |      |  |         /  _____  \  |  |      |  |      
+    |__|      \______/  | _| `._____| \______/__/     \__\ |_______/       |__|        /__/     \__\ | _|      | _|      
+                                                                                                                     
 
 
-Hi there! Welcome to Cloud9 IDE!
-
-To get you started, we included a small hello world application.
-
-1) Open the hello-world.html file
-
-2) Click on the Preview button to open a live preview pane
-
-3) Make some changes to the file, save, watch the preview, and have fun!
-
-Happy coding!
-The Cloud9 IDE team
+This forcast app will be able to be used to tell the current
+conditions of selected cities around the United States.
 
 
-## Support & Documentation
+## Sources & Referenced Codes
 
-Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+
